@@ -35,7 +35,8 @@ class Node {
                 static_cast<float>(rand() % static_cast<int>((2.0f * spread_multiplier * window_size) - (spread_multiplier * window_size)))
             }),
             force(Vector2{ 0.0f, 0.0f })
-            {}
+            {
+            }
 
         float mass() const {
             return (2.0f * PI * circleSize) / 1.5f;
@@ -199,7 +200,7 @@ int main(int argc, char *argv[]) {
         BeginDrawing();
         ClearBackground(BLACK);
         BeginMode2D(camera);
-        drawNodes(root, root.pos, 0.0f);
+        drawNodes(root, root.pos, 0);
         EndMode2D();
         EndDrawing();
     }
